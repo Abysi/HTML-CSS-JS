@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Museum</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700'>
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <div id='main-menu' class='main-menu'>
+        <div class='container-menu'>
+            <nav class='navigation'>
+                <span class='hamburger-menu'>Navigate
+                    <span class='burger-1'></span>
+                    <span class='burger-2'></span>
+                    <span class='burger-3'></span>
+                </span>
+                <ul class='core-menu'>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='#'>Visit<span class='toggle'></span></a>
+                        <ul class='dropdown'>
+                            <li><a href="Visit/planYourVisit.html">Plan Your Visit</a></li>
+                            <li><a href="Visit/foodAndDrink.html">Food And Drink</a></li>
+                            <li><a href="Visit/buyTicket.html">Buy Tickets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#'>Exibitions<span class='toggle'></a>
+                        <ul class='dropdown'>
+                            <li><a href="Exhibitions/currentExhibitions.html">Current Exibitions</a></li>
+                            <li><a href="Exhibitions/upcomingExhibitions.html">Upcoming Exibitions</a></li>
+                            <li><a href="Exhibitions/pastExhibitions.html">Past Exibitions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#'>Join And Give<span class='toggle'></a>
+                        <ul class='dropdown'>
+                            <li><a href="JoinAndGive/SupportTheMuseum.html">Support The Museum</a></li>
+                            <li><a href="JoinAndGive/Travel.html">Travel With Museum</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='shop/index.html'>Shop</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div>
+            <h1 class="banner-title">Experience 5,000 Years of Art</h1>
+            <br>
+            <button class="button-for-visit"><a href="Visit/planYourVisit.html">Plan Your Visit</a></button>
+        </div>
+    </div>
+
+
+    <div class="jumbotron">
+        <h2 class="page-titleh2">Hello, world!</h2>
+        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</p>
+    </div>
+
+    <div id="app" class="container">
+        <card data-image="img/Exhibitions-photo/UpComingExhibitions/photo2.jpg" alt="currentExhibitions/photo1">
+            <h1 slot="header">Gold-Nation</h1>
+            <p slot="content">Start premiere 9.24.2019</p>
+        </card>
+        <card data-image="img/Exhibitions-photo/UpComingExhibitions/photo3.jpg" alt="currentExhibitions/photo2">
+            <h1 slot="header">Silver-Nation</h1>
+            <p slot="content">Start premiere 9.31.2019</p>
+        </card>
+        <card data-image="img/Exhibitions-photo/TestNewPhotoForExhibitions/photo2.jpg" alt="currentExhibitions/photo3">
+            <h1 slot="header">Bronze-Nation</h1>
+            <p slot="content">Start premiere 10.07.2019</p>
+        </card>
+        <card data-image="img/Exhibitions-photo/TestNewPhotoForExhibitions/photo3.jpg" alt="currentExhibitions/photo4">
+            <h1 slot="header">Stone-Nation</h1>
+            <p slot="content">Start premiere 10.14.2019</p>
+        </card>
+        <card data-image="img/Exhibitions-photo/PastExhibitions/photo1.jpg" alt="upcomingExhibitions/photo1">
+            <h1 slot="header">Dark-Nation</h1>
+            <p slot="content">Start premiere 10.21.2019</p>
+        </card>
+        <card data-image="img/Exhibitions-photo/PastExhibitions/photo3.jpg" alt="upcomingExhibitions/photo2">
+            <h1 slot="header">Light-Nation</h1>
+            <p slot="content">Start premiere 10.28.2019</p>
+        </card>
+    </div>
+
+
+
+
+
+
+    <form class="contact-form">
+        <h1 class="page-titleh2">Bring some culture to your inbox.</h1>
+        <input type="email" id="email" placeholder="Enter you email to sign up for our news">
+        <input type="button" value="Submit" id="button-submit-email">
+    </form>
+
+
+    <footer>
+        <div>
+            <div class="footer">
+                <div class="footer-info">
+                    <h2 class="page-titleh2">Social</h2>
+                    <div class="container-footer">
+                        <div class="effect aeneas">
+                            <div class="buttons">
+                                <a href="#" class="fb" title="Join us on Facebook">
+                                    <i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="tw" title="Join us on Twitter">
+                                    <i class="fab fa-twitter"></i></a>
+                                <a href="#" class="g-plus" title="Join us on Google+">
+                                    <i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="insta" title="Join us on Instagram">
+                                    <i class="fab fa-instagram"></i></i></a>
+                                <a href="#" class="in" title="Join us on Linked In">
+                                    <i class="fab fa-linkedin-in"></i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ul class="footer-adress">
+                        <li>British Museum</li>
+                        <li>Great Russell St</li>
+                        <li>Bloomsbury, London WC1B 3DG</li>
+                        <li>phone +123456789</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"><strong>© 2018 Copyright:</strong>
+                <a href="#"> Lorem</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+<script src="Javascript.js"></script>
+<script src="vue.js"></script>
+
+</html>

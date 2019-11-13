@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add to cart interaction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <div id="wrapper">
+        <div class="cart-icon-top">
+        </div>
+
+        <div class="cart-icon-bottom">
+        </div>
+
+        <div id="checkout">
+            <div id="paypal-button" style="width: 130px"></div>
+        </div>
+
+        <div id="header">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </div>
+
+        <div id="sidebar">
+            <h3>CART</h3>
+            <div id="cart">
+                <span class="empty">No items in cart.</span>
+            </div>
+
+            <h3>CATEGORIES</h3>
+            <div class="checklist categories">
+                <ul>
+                    <li class="showNewArivals" style="padding: 5px 0"><input type="checkbox" id="isArivals" /> New
+                        Arivals</a></li>
+                    <li class="ShowAccesories" style="padding: 5px 0"><input type="checkbox" id="isAccesories" />
+                        Accesories</a></li>
+                </ul>
+            </div>
+
+            <h3>COLORS</h3>
+            <div class="checklist colors">
+                <ul>
+                    <li><a href=""><span></span>Beige</a></li>
+                    <li><a href=""><span style="background:#222"></span>Black</a></li>
+                    <li><a href=""><span style="background:#6e8cd5"></span>Blue</a></li>
+                    <li><a href=""><span style="background:#f56060"></span>Brown</a></li>
+                    <li><a href=""><span style="background:#44c28d"></span>Green</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href=""><span style="background:#999"></span>Grey</a></li>
+                    <li><a href=""><span style="background:#f79858"></span>Orange</a></li>
+                    <li><a href=""><span style="background:#b27ef8"></span>Purple</a></li>
+                    <li><a href=""><span style="background:#f56060"></span>Red</a></li>
+                    <li><a href=""><span
+                                style="background:#fff;border: 1px solid #e8e9eb;width:13px;height:13px;"></span>White</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="grid-selector">
+            <div id="grid-menu">
+                View:
+                <ul>
+                    <li class="largeGrid"><a href=""></a></li>
+                    <li class="smallGrid"><a class="active" href=""></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="grid">
+            <div class="product Arivals">
+                <div class="info-large">
+                    <h4>Boston Terrier</h4>
+                    <div class="sku">
+                        PRODUCT SKU: <strong>89356</strong>
+                    </div>
+
+                    <div class="price-big">
+                        <span>$170</span> $155
+                    </div>
+
+                    <h3>Available colors</h3>
+                    <div class="colors-large">
+                        <ul>
+                            <li><a href="" style="background:#222"><span></span></a></li>
+                            <li><a href="" style="background:#6e8cd5"><span></span></a></li>
+                            <li><a href="" style="background:#f56060"><span></span></a></li>
+                            <li><a href="" style="background:#44c28d"><span></span></a></li>
+                        </ul>
+                    </div>
+
+
+                    <button class="add-cart-large">Add To Cart</button>
+
+                </div>
+                <div class="make3D">
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="https://www.boutiquesdemusees.fr/uploads/photos/3589/40878_xl.jpg" alt="" />
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View gallery</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$155</span>
+                                <span class="product_name">Boston Terrier</span>
+                                <p>Toy</p>
+
+                                <div class="product-options">
+                                    <strong>Available colors</strong>
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-white"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-back">
+                        <div class="shadow"></div>
+                        <div class="carousel">
+                            <ul class="carousel-container">
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/3589/40900_xxl.jpg" alt="" /></li>
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/3589/40918_xxl.jpg" alt="" /></li>
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/3589/40879_xxl.jpg" alt="" /></li>
+                            </ul>
+                            <div class="arrows-perspective">
+                                <div class="carouselPrev">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                                <div class="carouselNext">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-back">
+                            <div class="cy"></div>
+                            <div class="cx"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product Arivals">
+                <div class="info-large">
+                    <h4>Victory of Samothrace</h4>
+                    <div class="sku">
+                        PRODUCT SKU: <strong>89354</strong>
+                    </div>
+
+                    <div class="price-big">
+                        <span>$200</span> $190
+                    </div>
+
+                    <h3>Available colors</h3>
+                    <div class="colors-large">
+                        <ul>
+                            <li><a href="" style="background:#222"><span></span></a></li>
+                            <li><a href="" style="background:#6e8cd5"><span></span></a></li>
+                            <li><a href="" style="background:#f56060"><span></span></a></li>
+                            <li><a href="" style="background:#44c28d"><span></span></a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <button class="add-cart-large">Add To Cart</button>
+
+                </div>
+                <div class="make3D">
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="https://www.boutiquesdemusees.fr/uploads/photos/644/22229_xl.jpg" alt="" />
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View gallery</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$190</span>
+                                <span class="product_name">Victory of Samothrace</span>
+                                <p>State</p>
+
+                                <div class="product-options">
+                                    <strong>Available colors</strong>
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-white"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-back">
+                        <div class="shadow"></div>
+                        <div class="carousel">
+                            <ul class="carousel-container">
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/644/22228_xxl.jpg" alt="" /></li>
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/644/22231_xxl.jpg" alt="" /></li>
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/644/22236_xxl.jpg" alt="" /></li>
+                            </ul>
+                            <div class="arrows-perspective">
+                                <div class="carouselPrev">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                                <div class="carouselNext">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-back">
+                            <div class="cy"></div>
+                            <div class="cx"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product Accesories">
+                <div class="info-large">
+                    <h4>Marianne - Brigitte</h4>
+                    <div class="sku">
+                        PRODUCT SKU: <strong>89356</strong>
+                    </div>
+
+                    <div class="price-big">
+                        <span>$980</span> $999
+                    </div>
+
+                    <h3>Available colors </h3>
+                    <div class="colors-large">
+                        <ul>
+                            <li><a href="" style="background:#222"><span></span></a></li>
+                            <li><a href="" style="background:#6e8cd5"><span></span></a></li>
+                            <li><a href="" style="background:#f56060"><span></span></a></li>
+                            <li><a href="" style="background:#44c28d"><span></span></a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <button class="add-cart-large">Add To Cart</button>
+
+                </div>
+                <div class="make3D">
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="https://www.boutiquesdemusees.fr/uploads/photos/1973/34612_xl.jpg" alt="" />
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View gallery</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$999</span>
+                                <span class="product_name">Bardot by Alain Aslan</span>
+                                <p>State</p>
+
+                                <div class="product-options">
+
+                                    <strong>Available colors</strong>
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-white"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-back ">
+                        <div class="shadow"></div>
+                        <div class="carousel">
+                            <ul class="carousel-container">
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/1973/34611_xxl.jpg" alt="" /></li>
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/1973/34617_xxl.jpg" alt="" /></li>
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/1973/34613_xxl.jpg" alt="" /></li>
+                            </ul>
+                            <div class="arrows-perspective">
+                                <div class="carouselPrev">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                                <div class="carouselNext">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-back">
+                            <div class="cy"></div>
+                            <div class="cx"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product Accesories">
+                <div class="info-large">
+                    <h4>Green patina coot</h4>
+                    <div class="sku">
+                        PRODUCT SKU: <strong>89356</strong>
+                    </div>
+
+                    <div class="price-big">
+                        <span>$43</span> $39
+                    </div>
+
+                    <h3>Available colors</h3>
+                    <div class="colors-large">
+                        <ul>
+                            <li><a href="" style="background:#222"><span></span></a></li>
+                            <li><a href="" style="background:#6e8cd5"><span></span></a></li>
+                            <li><a href="" style="background:#f56060"><span></span></a></li>
+                            <li><a href="" style="background:#44c28d"><span></span></a></li>
+                        </ul>
+                    </div>
+
+
+                    <button class="add-cart-large">Add To Cart</button>
+
+                </div>
+                <div class="make3D">
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="https://www.boutiquesdemusees.fr/uploads/photos/1494/40996_xl.jpg" alt="" />
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View gallery</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$39</span>
+                                <span class="product_name">Green patina coot</span>
+                                <p>François Pompon</p>
+
+                                <div class="product-options">
+
+                                    <strong>Available colors</strong>
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-white"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-back">
+                        <div class="shadow"></div>
+                        <div class="carousel">
+                            <ul class="carousel-container">
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/1494/40995_xxl.jpg" alt="" /></li>
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/1494/41001_xxl.jpg" alt="" /></li>
+                                <li><img src="https://www.boutiquesdemusees.fr/uploads/photos/1494/40997_xxl.jpg" alt="" /></li>
+                            </ul>
+                            <div class="arrows-perspective">
+                                <div class="carouselPrev">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                                <div class="carouselNext">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-back">
+                            <div class="cy"></div>
+                            <div class="cx"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- partial -->
+    <script src="script.js"></script>
+</body>
+
+</html>

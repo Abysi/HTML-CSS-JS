@@ -1,0 +1,1035 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li,
+a,
+button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #edf0f1;
+  text-decoration: none;
+  list-style-type: none;
+}
+h1,
+h2,
+h3 {
+  font-family: "Nunito Sans", sans-serif;
+}
+p {
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+button {
+  background-color: black;
+}
+button:hover {
+  background-color: hsl(0, 0%, 21%);
+}
+
+.main-menu {
+  display: block;
+  position: relative;
+  background: #0e0e0e;
+}
+.container-menu {
+  width: 80%;
+  margin: 0 auto;
+}
+.main-menu:before,
+.main-menu:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.core-menu {
+  text-align: center;
+  font: normal normal normal 1em/1 Roboto, sans-serif;
+  overflow: hidden;
+}
+.core-menu li {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.core-menu li a {
+  display: inline-block;
+  padding: 1em;
+}
+.core-menu li a:hover {
+  background: #38a201;
+}
+li span.toggle {
+  padding-left: 1em;
+}
+.toggle:before {
+  content: "\f107";
+  font: normal normal normal 16px/1 FontAwesome;
+}
+.dropdown {
+  position: absolute;
+  width: 230px;
+  background: #1a1a1a;
+  text-align: left;
+  display: none;
+  z-index: 999;
+}
+.dropdown li {
+  display: block;
+  z-index: 999;
+}
+.dropdown li a {
+  display: block;
+}
+.dropdown2 {
+  position: absolute;
+  width: 230px;
+  background: #2d2d2d;
+  text-align: left;
+  display: none;
+  right: -100%;
+  top: 0;
+}
+
+li span.toggle2 {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+.toggle2:before {
+  content: "\f105";
+  font: normal normal normal 16px/1 FontAwesome;
+}
+.hamburger-menu {
+  padding: 1em;
+  color: white;
+  display: none;
+  font: normal normal normal 16px/1 Roboto;
+  text-transform: uppercase;
+}
+.wrap-container-support-the-museum {
+  padding: 0 30%;
+}
+
+div.banner {
+  height: 90vh;
+  background-image: url(../img/index_img.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-title {
+  text-align: center;
+  min-width: 100%;
+  font-size: 3rem;
+  color: white;
+}
+.button-for-visit {
+  border: 2px solid white;
+  background-color: transparent;
+  font-size: 13px;
+  margin-left: 40%;
+  transition: background-color 0.5s ease;
+}
+.button-for-visit:hover {
+  background-color: black;
+}
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  height: 100px;
+  margin: 10px 0;
+}
+.image-content img {
+  height: 300px;
+  width: 300px;
+  margin: 10px;
+}
+
+.container {
+  padding: 40px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-wrap {
+  margin: 10px;
+  -webkit-transform: perspective(800px);
+  transform: perspective(800px);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.card-wrap:hover .card-info {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.card-wrap:hover .card-info p {
+  opacity: 1;
+}
+.card-wrap:hover .card-info,
+.card-wrap:hover .card-info p {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card-wrap:hover .card-info:after {
+  transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.card-wrap:hover .card-bg {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0.8;
+}
+.card-wrap:hover .card {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px,
+    rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+    inset white 0 0 0 6px;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 240px;
+  width: 240px;
+  height: 320px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+    inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card-bg {
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  pointer-events: none;
+}
+
+.card-info {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  -webkit-transform: translateY(40%);
+  transform: translateY(40%);
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card-info p {
+  opacity: 0;
+  text-shadow: black 0 2px 3px;
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card-info * {
+  position: relative;
+  z-index: 1;
+}
+.card-info:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  background-blend-mode: overlay;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card-info h1 {
+  font-family: "Playfair Display";
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+}
+
+.image-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  height: 100px;
+  background-color: black;
+}
+.contact-form h1 {
+  display: flex;
+  justify-content: flex-start;
+  height: auto;
+  color: white;
+}
+#email {
+  width: 250px;
+  height: 2rem;
+  margin: 0 20px;
+}
+
+#button-submit-email {
+  margin-left: -20px;
+  width: 50px;
+  height: 2rem;
+}
+
+.footer {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  background-color: #f2f2f2;
+  padding: 15px 0;
+}
+
+.footer-info {
+  text-align: center;
+}
+.footer-adress li {
+  color: black;
+  margin-bottom: 7px;
+}
+.container-footer {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  transform: scale(0.7);
+}
+.copyright {
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.copyright a {
+  color: black;
+}
+.black-a {
+  color: black;
+  text-decoration-line: underline;
+}
+/* Social Buttons */
+.effect {
+  display: flex;
+}
+.effect a {
+  text-decoration: none !important;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-right: 20px;
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+}
+.effect a i {
+  position: relative;
+  z-index: 3;
+}
+.effect a.fb {
+  background-color: #3b5998;
+}
+.effect a.tw {
+  background-color: #00aced;
+}
+.effect a.g-plus {
+  background-color: #dd4b39;
+}
+.effect a.dribbble {
+  background-color: #ea4c89;
+}
+.effect a.pinterest {
+  background-color: #cb2027;
+}
+.effect a.insta {
+  background-color: #bc2a8d;
+}
+.effect a.in {
+  background-color: #007bb6;
+}
+.effect a.vimeo {
+  background-color: #1ab7ea;
+}
+
+/* aeneas effect */
+.effect.aeneas a {
+  transition: border-top-left-radius 0.1s linear 0s,
+    border-top-right-radius 0.1s linear 0.1s,
+    border-bottom-right-radius 0.1s linear 0.2s,
+    border-bottom-left-radius 0.1s linear 0.3s, -webkit-transform 0.4s linear 0s;
+  transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s,
+    border-top-right-radius 0.1s linear 0.1s,
+    border-bottom-right-radius 0.1s linear 0.2s,
+    border-bottom-left-radius 0.1s linear 0.3s;
+  transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s,
+    border-top-right-radius 0.1s linear 0.1s,
+    border-bottom-right-radius 0.1s linear 0.2s,
+    border-bottom-left-radius 0.1s linear 0.3s, -webkit-transform 0.4s linear 0s;
+}
+.effect.aeneas a i {
+  transition: -webkit-transform 0.4s linear 0s;
+  transition: transform 0.4s linear 0s;
+  transition: transform 0.4s linear 0s, -webkit-transform 0.4s linear 0s;
+}
+.effect.aeneas a:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  border-radius: 50%;
+}
+.effect.aeneas a:hover i {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+.promo-area {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.promo-area div {
+  border: 1px solid black;
+  overflow: hidden;
+}
+.promo-area img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  transition: all 1s ease;
+}
+.promo-area img:hover {
+  transform: scale(1.1);
+}
+.promo-area p {
+  padding-top: 5px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.visit-admission {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  height: 400px;
+}
+.visit-admission div {
+  width: 570px;
+}
+.general-admission h2,
+p {
+  padding: 10px 0px;
+}
+.general-admission table td {
+  width: 200px;
+  font-size: 20px;
+}
+.general-admission button {
+  padding: 12px 40px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.suggest-admission {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+}
+.suggest-admission h2,
+p {
+  padding: 10px 0px;
+}
+.food-and-drink-wrapper {
+  margin: 0 50px;
+}
+.food-photo img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 460px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.page-titleh1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+.page-titleh2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.menu-list {
+  display: flex;
+}
+.menu-info a {
+  color: black;
+  text-decoration-line: underline;
+}
+.menu-hours li {
+  color: black;
+  margin-bottom: 3px;
+}
+.buy-ticket-pic {
+  height: 600px;
+  background-image: url(../img/photoMuseumIncide.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.buy-ticket-pic h1 {
+  padding-bottom: 40px;
+  padding-left: 40px;
+}
+
+.buy-ticket-info ul li {
+  color: black;
+}
+.buy-ticket-info {
+  background-color: darkgrey;
+  margin: 25px 0;
+  padding: 30px;
+}
+.buy-ticket-info h2 {
+  opacity: 0.3;
+  padding-bottom: 10px;
+}
+.buy-ticket-info h3 {
+  padding-bottom: 10px;
+}
+.buy-ticket-info ul {
+  list-style-type: circle;
+}
+
+.admission-total {
+  display: flex;
+  justify-content: space-between;
+}
+.admission-total button {
+  margin-left: 10%;
+  width: 100px;
+  height: 40px;
+}
+.right-bar {
+  margin-left: 130px;
+  margin-top: 25px;
+  width: 285px;
+  height: 180px;
+}
+.buy-ticket-page {
+  display: flex;
+  margin: 0 54px;
+}
+.event-promo {
+  border: 1px solid rgba(211, 211, 211, 0.3);
+}
+.event-promo p {
+  font-size: 16px;
+}
+.event-promo a {
+  color: black;
+  text-decoration-line: underline;
+}
+.admission-help-contacts {
+  color: black;
+}
+.admission-help-contacts a {
+  color: black;
+}
+.admission-help {
+  margin-top: 25px;
+}
+
+.exhibitions-pages {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+.exhb-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 33.33333%;
+  max-height: 560px;
+}
+
+.image-exhb {
+  max-width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.image-exhb img {
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  position: relative;
+}
+.image-exhb img:hover {
+  opacity: 1;
+}
+.image-exhb-discription {
+  position: absolute;
+  bottom: 25px;
+  left: 15px;
+}
+.image-exhb-discription p {
+  padding: 0;
+  color: white;
+}
+.page-title-grid {
+  grid-column: span 12;
+  margin-bottom: 20px;
+  padding-top: 0;
+}
+.image-block {
+  grid-column: span 4;
+  margin-bottom: 30px;
+  height: auto;
+  width: auto;
+}
+.image-block img {
+  width: 100%;
+  height: 100%;
+}
+
+.red-button {
+  padding: 12px 40px;
+  margin-top: 30px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.donation-form {
+  padding: 40px;
+  border: 1px solid darkgray;
+  width: 100%;
+}
+.button-selectors button {
+  height: 50px;
+  color: white;
+  border: 1px solid darkgrey;
+  padding: 10px 0;
+  width: 140px;
+  min-width: auto;
+  margin-bottom: 25px;
+  margin-right: 25px;
+
+  text-align: center;
+}
+
+.button-selectors {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.button-selectors-custom {
+  display: none;
+}
+.button-selectors-custom input {
+  width: 280px;
+  height: 25px;
+  padding: 10px;
+}
+/* No Scrolling input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.donation-details-form textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+}
+
+.banner-travel img {
+  height: 600px;
+  width: 100%;
+  background-position: center;
+}
+.travel-wrapper {
+  margin: 0 10%;
+}
+.travel-info {
+  padding: 0 10%;
+}
+
+.admission-help-buy {
+  display: flex;
+  justify-content: space-between;
+}
+.admission-help-buy div {
+  margin: 20px;
+  font-size: 20px;
+}
+.admission-help-type {
+  width: 30%;
+  border-bottom: 1px solid black;
+}
+.admission-help-price {
+  width: 10%;
+  justify-content: flex-start;
+  border-bottom: 1px solid black;
+  margin: 0 20px;
+}
+.admission-help-quantity {
+  width: 30%;
+  justify-content: flex-start;
+  border-bottom: 1px solid black;
+}
+.general-admission-buy-ticket {
+  padding: 40px;
+  border: 1px solid black;
+}
+.admission-info-ticket li {
+  list-style-type: disc;
+  color: black;
+}
+.sale-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+.sale-item-name {
+  flex-basis: 50%;
+  font-weight: 700;
+  font-size: 20px;
+  justify-content: center;
+  padding-right: 10px;
+}
+.sale-item-price {
+  flex-basis: 17%;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.sale-item-down {
+  height: 26px;
+  flex-basis: 1%;
+  justify-content: flex-end;
+  align-content: center;
+  border: 1px solid #000006;
+  opacity: 0.3;
+}
+.sale-item-quantity {
+  flex-basis: 3%;
+  font-size: 28px;
+  text-align: center;
+}
+.sale-item-up {
+  flex-basis: 1%;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid #000006;
+  height: 26px;
+}
+.btn-buy {
+  background: #65696a;
+  width: 36px;
+  height: 36px;
+}
+.admission-total-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.plan-your-visit-wrapper {
+  margin: 0 10%;
+}
+.total-box-wrapper {
+  margin: 50px 0;
+  padding: 25px 40px;
+  border: 1px solid darkgrey;
+}
+.total-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.support-the-museum-total-price {
+  flex-basis: auto;
+  font-size: 24px;
+}
+.support-the-museum-give {
+  flex-basis: auto;
+}
+.total-box a {
+  padding: 12px 40px;
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+}
+.total-box a:hover {
+  background-color: hsl(0, 0%, 21%);
+}
+
+.label-forms {
+  font-size: 18px;
+}
+
+
+
+.shopping-card-column {
+  border: 1px solid #c5c7c7;
+  width: 50%;
+  padding: 30px;
+}
+.shopping-card-list li {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shopping-card-total .page-titleh2 {
+  padding: 40px;
+}
+.shopping-card-button {
+  width: 100%;
+  height: 50px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+  display: flex;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 36px;
+  line-height: 3;
+  background: darkgrey;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+select {
+  flex: 1;
+  padding: 0 0.5em;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: darkgrey;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: red;
+}
+@media screen and (min-width: 500px) {
+  .image-block {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 720px) {
+  .main-menu {
+    height: 50px;
+  }
+  .container-menu {
+    width: 100%;
+  }
+  .navigation {
+    float: left;
+    display: block;
+    width: 100%;
+  }
+  .core-menu {
+    float: right;
+    width: 100%;
+    background: #1a1a1a;
+    margin: auto;
+    display: none;
+  }
+  .suggest-admission p {
+    font-size: 16px;
+  }
+
+  .core-menu li {
+    width: 100%;
+    display: block;
+  }
+  .core-menu li a {
+    display: block;
+    margin: auto;
+  }
+  .hamburger-menu {
+    display: block;
+    text-align: center;
+    padding-right: 60px;
+    float: none;
+    width: 100%;
+  }
+  .burger-1,
+  .burger-2,
+  .burger-3 {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    border-radius: 30px;
+    right: 0;
+    margin-right: 25px;
+    background: #fff;
+    -webkit-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  .burger-1 {
+    top: 15px;
+  }
+  .burger-2 {
+    top: 23px;
+  }
+  .burger-3 {
+    top: 31px;
+  }
+  .burger-1.open,
+  .burger-2.open,
+  .burger-3.open {
+    -webkit-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+    transform-origin: 50% 50%;
+  }
+  .burger-1.open {
+    top: 25px;
+    width: 23px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+  .burger-2.open {
+    opacity: 0;
+  }
+  .burger-3.open {
+    top: 25px;
+    width: 23px;
+    transform: rotate(-45deg);
+  }
+  .dropdown {
+    width: 100%;
+    background: #0e0e0e;
+    text-align: center;
+    position: relative;
+  }
+  .contact-form h1 {
+    font-size: x-large;
+  }
+  .footer-adress li {
+    font-size: 16px;
+  }
+  .footer-info {
+    width: 340px;
+  }
+  .footer-info h2 {
+    margin-left: 54px;
+  }
+  .menu-list {
+    flex-direction: column;
+  }
+  .wrap-container-support-the-museum {
+    padding: 0 35px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .right-bar {
+    display: none;
+  }
+  .payment-info {
+    flex-wrap: wrap;
+  }
+  .payment-form-fields {
+    display: flex;
+    flex-direction: column;
+  }
+  .payment-information {
+    width: 100%;
+  }
+  .shopping-card-column {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .image-block {
+    grid-column: span 4;
+  }
+}
